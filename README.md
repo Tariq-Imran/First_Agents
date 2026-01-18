@@ -1,13 +1,13 @@
 
-LangChain Essentials!
+## LangChain Essentials!
 
 🚀 Setup
 
-Browser
+## Browser
 
 The Brave browser is recommended
 
-Prerequisites
+## Prerequisites
 
 Ensure you're using Python 3.11 - 3.13. This version is required for optimal compatibility with LangChain
 uv package manager or pip
@@ -28,7 +28,7 @@ Sign up for LangSmith
 
 Create a LangSmith account and API key 
 
-# Add your API key to your .env file
+## Add your API key to your .env file
 LANGSMITH_API_KEY=your_langsmith_api_key_here
 LANGSMITH_TRACING=true
 LANGSMITH_PROJECT=langchain-py-essentials
@@ -42,7 +42,7 @@ Make a copy of example.env:
 cp example.env .env
 Insert API keys directly into .env file, OpenAI (required) and LangSmith (optional):
 
-# Add OpenAI API key
+## Add OpenAI API key
 OPENAI_API_KEY=your_openai_api_key_here
 # The course is written using OpenAI models. You can choose other vendors if you prefer.
 # Remember to change the code and add their key.
@@ -70,10 +70,10 @@ Run notebooks:
 uv run jupyter lab
 
 # Or activate the virtual environment if preferred
-# On Windows: .venv\Scripts\activate
+On Windows: .venv\Scripts\activate
 
 
-#to run with uv
+# to run with uv
 go to current working directories 
 cd notebook
 uv run langgraph dev
