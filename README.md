@@ -1,8 +1,6 @@
 
 LangChain Essentials!
 
-
-
 🚀 Setup
 
 Browser
@@ -30,20 +28,12 @@ Sign up for LangSmith
 
 Create a LangSmith account and API key 
 
-
 # Add your API key to your .env file
 LANGSMITH_API_KEY=your_langsmith_api_key_here
 LANGSMITH_TRACING=true
 LANGSMITH_PROJECT=langchain-py-essentials
 # If you are on the EU instance:
 LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
-
-Installation
-
-Download the course repository:
-
-# Clone the repo, cd to 'python' directory
-git clone https://github.com/langchain-ai/lca-langchainV1-essentials.git
 
 
 Make a copy of example.env:
@@ -65,22 +55,27 @@ LANGSMITH_PROJECT=langchain-py-essentials
 Make a virtual environment and install dependencies:
 
 # Create virtual environment and install dependencies
+
+uv init
+uv venv
+uv add ipykernel
 uv sync
+
+# Set Python veersion
+uv python pin 3.13.5  or
+uv venv --python 3.13.5
 Run notebooks:
 
 # Run Jupyter notebooks directly with uv
 uv run jupyter lab
 
 # Or activate the virtual environment if preferred
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-jupyter lab
-Optional: Setup LangSmith Studio
+# On Windows: .venv\Scripts\activate
 
-# copy the .env file you created above to the studio directory
-cp .env ./studio/.
-cd studio
 
 #to run with uv
+go to current working directories 
+cd notebook
 uv run langgraph dev
 #to run with virtual env
 langgraph dev
@@ -90,25 +85,27 @@ langgraph dev
 
 This repository contains nine short notebooks that serve as brief introductions to many of the most-used features in LangChain, starting with the new Create Agent.
 
-L1_fast_agent.ipynb - 🤖 Create Agent 🤖
+🤖 Create Agent 🤖
+1_fast_agent.ipynb -
 
 In this notebook, you will use LangChain’s create_agent to build an SQL agent in just a few lines of code.
 It demonstrates how quick and easy it is to build a powerful agent. You can easily take this agent and apply it to your own project.
 You will also use LangSmith Studio, a handy visual debugger to run, host, and explore agents.
 
-L2-7.ipynb - 🧱 Building Blocks 🧱
+🧱 Building Blocks 🧱
 
-In Lessons 2–7, you will learn how to use some of the fundamental building blocks in LangChain. These lessons explain and complement create_agent, and you’ll find them useful when creating your own agents. Each lesson is concise and focused.
+In ipynb 2–7, you will learn how to use some of the fundamental building blocks in LangChain. These lessons explain and complement create_agent, and you’ll find them useful when creating your own agents. Each lesson is concise and focused.
 
-L2_messages.ipynb: Learn how messages convey information between agent components.
-L3_streaming.ipynb: Learn how to reduce user-perceived latency using streaming.
-L4_tools.ipynb: Learn basic tool use to enhance your model with custom or prebuilt tools.
-L5_tools_with_mcp.ipynb: Learn to use the LangChain MCP adapter to access the world of MCP tools.
-L6_memory.ipynb: Learn how to give your agent the ability to maintain state between invocations.
-L7_structuredOutput.ipynb: Learn how to produce structured output from your agent.
-L8-9.ipynb - 🪛 Customize Your Agent 🤖
+2_messages.ipynb - Learn how messages convey information between agent components.
+3_streaming.ipynb - Learn how to reduce user-perceived latency using streaming.
+4_tools.ipynb - Learn basic tool use to enhance your model with custom or prebuilt tools.
+5_tools_with_mcp.ipynb - Learn to use the LangChain MCP adapter to access the world of MCP tools.
+6_memory.ipynb - Learn how to give your agent the ability to maintain state between invocations.
+7_structuredOutput.ipynb - Learn how to produce structured output from your agent.
 
-Lessons 2–7 covered out-of-the-box features. However, create_agent also supports both prebuilt and user-defined customization through Middleware. This section describes middleware and includes two lessons highlighting specific use cases.
+Create_agent also supports both prebuilt and user-defined customization through Middleware. This section describes middleware and includes two lessons highlighting specific use cases.
+8_dynamic.ipynb - Build a Dynamic Prompt. Learn how to dynamically modify the agent’s system prompt to react to changing contexts.
+9_hitl.ipynb - Build Human In The Loop. Learn how to use Interrupts to enable Human-in-the-Loop interactions.
 
-L8_dynamic.ipynb: Learn how to dynamically modify the agent’s system prompt to react to changing contexts.
-L9_HITL.ipynb: Learn how to use Interrupts to enable Human-in-the-Loop interactions.
+
+
