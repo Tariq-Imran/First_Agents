@@ -1,0 +1,12 @@
+langgraph>=1.0.0
+langchain>=1.0.0
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-groq
+langchain-text-splitters
+langchain-openai
+langchain-anthropic>=1.0.0
+jupyter>=1.0.0
+langgraph-cli[inmem]>=0.4.0
+langchain-mcp-adapters
